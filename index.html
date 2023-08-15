@@ -24,17 +24,15 @@
     }
 
     h1 {
-      text-align: start;
-      color: #333;
-      font-size: 32px;
       padding-left: 20px;
       font-weight: bold;
       margin-bottom: 30px;
     }
 
-    .avatar { 
+    .avatar {
       text-align: right;
     }
+
     /* Navigation */
     .topnav {
       display: flex;
@@ -54,7 +52,7 @@
       transition: background-color 0.3s ease;
       border-radius: 5px;
       font-size: 18px;
-      font-weight:bolder;
+      font-weight: bolder;
       position: relative;
       /* Add position relative for the parent container */
     }
@@ -99,10 +97,17 @@
 
     /* Footer */
     .footer {
-      background-color: #f1f1f1;
+      
       padding: 10px;
       text-align: center;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid #a3a3a3;
+    }
+
+    .blur {
+      box-shadow: inset 0px 0px 2px #fefefed1;
+      -webkit-backdrop-filter: blur(27.2px);
+      backdrop-filter: blur(27.2px);
+      background-color: rgba(255, 255, 255, 0.85) !important;
     }
   </style>
 </head>
@@ -118,31 +123,17 @@
     </div>
 
     <div class="container">
-      <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wwuo?ver=7f01"
+      <img src="https://avatars.githubusercontent.com/u/82871660?v=4"
         class="image-container"></img>
-      <p>This is the content of the Home page.</p>
-      The paper describes a regularization technique called "Tangent Propagation Training" (TPT) that can mitigate
-      neural collapse and improve the generalization performance and adversarial robustness of deep learning models.
 
-      TPT involves constraining the tangent space of the last-layer activations to be aligned with the tangent space of
-      the input data manifold. This is achieved by adding a regularization term to the loss function that encourages the
-      last-layer activations to be close to the tangent space of the input data manifold.
-
-      During training, the tangent space of the input data manifold is estimated using a local linear approximation
-      based on the input data and the current model parameters. The tangent space of the last-layer activations is then
-      constrained to be aligned with this estimated tangent space using a projection operation.
-
-      The authors show that TPT can induce an underlying mathematical simplicity to the trained deepnet model, which
-      naturally suggests performance benefits. Additionally, they demonstrate that convergence to this rigid structure
-      tends to occur simultaneously with improvements in the network’s generalization performance as well as adversarial
-      robustness.
     </div>
+    <footer class="footer blur">
+      <p>This is my personal website hosted on GitHub Pages.</p>
+      <p> Copyright © 2023 sdfsdfsv.github.io</p>
+    </footer>
   </div>
 
-  <footer class="footer">
-    <p>This is my personal website hosted on GitHub Pages.</p>
-    <p> Copyright © 2023 sdfsdfsv.github.io</p>
-  </footer>
+ 
 </body>
 
 </html>
