@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Pasteboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #pasteboard {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #ccc;
+            overflow: auto;
+            white-space: pre-wrap;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Global Pasteboard</h1>
+    <textarea id="pasteboard" placeholder="Paste your content here..."></textarea>
+
+    <script>
+        // Function to save content to localStorage
+        function saveToLocalStorage() {
+            var content = document.getElementById('pasteboard').value;
+            localStorage.setItem('global_pasteboard_content', content);
+        }
+
+        // Function to load content from localStorage
+        function loadFromLocalStorage() {
+            var content = localStorage.getItem('global_pasteboard_content');
+            if (content) {
+                document.getElementById('pasteboard').value = content;
+            }
+        }
+
+        // Load content when the page loads
+        loadFromLocalStorage();
+
+        // Save content when the textarea is updated
+        document.getElementById('pasteboard').addEventListener('input', saveToLocalStorage);
+    </script>
+</body>
+</html>
